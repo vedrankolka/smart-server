@@ -1,0 +1,31 @@
+{$= "text/html" @setMimeType $}
+<html>
+ <head>
+  <title>Table of Fibonacci numbers</title>
+ </head>
+ <body>
+  <h1>Fibonacci numbers</h1>
+  <p>The following is a table of the first 10 Fibonacci numbers.</p>
+
+{$= "0" "a" @tparamSet
+ "1" "b" @tparamSet $}
+ 
+  <table>
+	 <thead>
+		 <tr><th>Order number.</th><th>Fibonacci number.</th></tr>
+ 	 </thead>
+ 	 <tbody>
+		<tr><td>1</td><td>0</td></tr>
+		<tr><td>2</td><td>1</td></tr>
+ 		{$FOR i 3 10 1$}
+ 		{$=
+			 "b" "0" @tparamGet @dup
+			 "a" "0" @tparamGet +
+    		 "b" @tparamSet "a" @tparamSet
+    	$}
+    	<tr><td>{$= i $}</td><td>{$= "b" "0" @tparamGet $}</td></tr>
+    	{$END$}
+	 </tbody>
+  </table>
+ </body>
+</html>

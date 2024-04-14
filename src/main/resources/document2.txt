@@ -1,0 +1,17 @@
+Start of document.
+int i = 0;
+{$FOR i in range 5$}
+	int j = 0;
+	{$FOR j "0" 10$}
+		{$= a*@sin pi/2 + i*b*@cos pi/2 $}
+		Maybe some code documentation.
+		{$= "not the end \" of the strnig yet!" variable1
+		variable2 "some more escape \\ \n \tsequences that should work"
+		@a_function_with_123_numbers_and_underscores
+		$}
+	{$END$}
+	Some more documentation, I guess.
+	{$FOR k 1 2 3$}
+		Nothing special.
+	{$END$}
+{$END$}

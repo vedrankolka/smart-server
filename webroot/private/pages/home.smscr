@@ -1,0 +1,66 @@
+{$= "text/html" @setMimeType $}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<title>Smart Server</title>
+		<style>
+      	BODY{
+       		background-color: #{$ = "background" "background" @tparamGet $};
+		}
+      	SPAN.it {
+        	font-style: italic;
+		}
+    	</style>
+	</head>
+	<body>
+	
+		<h1>Home page</h1>
+	
+		<p>
+			Welcome! This page offers the following executable scripts:
+		</p>
+		
+		<ul>
+		<li><a href="/scripts/osnovni.smscr">osnovni.smscr</a></li>
+		<li><a href="/scripts/brojPoziva.smscr">brojPoziva.smscr</a></li>
+		<li><a href="/scripts/fibonaccih.smscr">fibonaccih.smscr</a></li>
+		</ul>
+		
+		<p>
+			And the following workers:
+		</p>
+		
+		<ul>
+		<li>HelloWorker<a href="/ext/HelloWorker">(run)</a></li>
+		<li>CircleWorker<a href="/ext/CircleWorker">(run)</a></li>
+		<li>EchoParamsWorker<a href="/ext/EchoParams">(run)</a></li>
+		</ul>
+		
+		<p>
+			Sum two numbers and get a <span class="it">cool</span> picture!
+		</p>
+		
+		<form action="/ext/SumWorker" method="GET">
+			a = <input type="text" name="a"><br>
+			b = <input type="text" name="b"><br>
+			<input type="submit" value="Sum">
+		</form>
+		
+		<p>
+			Choose a background color!
+		</p>
+		
+		<form action="/ext/BgColorWorker" method="GET">
+			<select name="bgcolor">
+				<option value="FF0000">Red</option>
+				<option value="FF7F50">Tomato</option>
+				<option value="FF8C00">Orange</option>
+				<option value="FFFF00">Yellow</option>
+				<option value="FFFFFF">White</option>
+			</select>
+			<input type="submit" value="Set">
+		</form>
+		
+	</body>
+</html>

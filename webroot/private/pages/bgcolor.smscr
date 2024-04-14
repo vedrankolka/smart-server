@@ -1,0 +1,14 @@
+{$= "text/html" @setMimeType $}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Background color</title>
+	</head>
+	<body>
+		<h3>Background color was {$ = "updated" "updated" @tparamGet $}updated</h3>
+		
+		<p>
+			<a href="/index2.html">index2.html</a>
+		</p>
+	</body>
+</html>

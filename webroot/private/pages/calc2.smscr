@@ -1,0 +1,14 @@
+{$= "text/html" @setMimeType $}
+<html>
+	<head>
+		<title>Zbrajanje</title>
+	</head>
+	<body>
+	
+		<table>
+			<tbody>
+				<p>Evo html buraz</p>
+			</tbody>
+		</table>
+	</body>
+</html>
